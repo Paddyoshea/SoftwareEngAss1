@@ -9,6 +9,7 @@
  * @author Paddy
  */
 import java.util.*;
+import java.text.*;
 import org.joda.time.LocalDate;
 
 
@@ -23,11 +24,15 @@ public class Student {
     private ArrayList<String> courses;
     private ArrayList<String> modules;
     
-    public Student(String name , int age, DateTime DOB)
+    
+    
+    public Student(String name , int age, String DOB)
     {
         this.name = name;
         this.age = age;
-        this.DOB = DOB;
+        DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+        LocalDate date = LocalDate.parse(DOB, dateFormat);
+        this.DOB = date;
         userName = name + String.valueOf(age);
         
     }
