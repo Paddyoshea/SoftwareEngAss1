@@ -9,27 +9,27 @@
  * @author Paddy
  */
 import java.util.*;
-import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
+
 
 
 public class Student {
     
     private String name;
     private int age;
-    private DateTime DOB;
+    private LocalDate DOB;
     private long ID;
     private String userName;
-    private String[] courses;
-    private String[] modules;
+    private ArrayList<String> courses;
+    private ArrayList<String> modules;
     
-    public Student(String name , int age, DateTime DOB, String[] courses, String[] modules)
+    public Student(String name , int age, DateTime DOB)
     {
         this.name = name;
         this.age = age;
         this.DOB = DOB;
         userName = name + String.valueOf(age);
-        this.courses = courses;
-        this.modules = modules;
+        
     }
     
     public String getUserName()
@@ -50,6 +50,26 @@ public class Student {
     public long getID()
     {
         return ID;
+    }
+    
+    public ArrayList<String> getCourses()
+    {
+        return courses;
+    }
+    
+    public ArrayList<String> getModule()
+    {
+        return modules;
+    }
+    
+    public void addCourse(String name)
+    {
+        courses.add(name);
+    }
+    
+    public void addModule(String name)
+    {
+        courses.add(name);
     }
     
     

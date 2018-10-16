@@ -1,3 +1,6 @@
+
+import java.util.ArrayList;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,15 +14,23 @@
 public class Module {
     private String ModuleName;
     private Long ModuleID;
-    private String[] students;
-    private String[] courses;
+    private ArrayList<Student> students;
+    private ArrayList<CourseProgramme> courses;
     
-    public Module(String modName, long Id, String[] students, String[] courses)
+    public Module(String modName, long Id)
     {
         this.ModuleName = modName;
         this.ModuleID = Id;
-        this.students = students;
-        this.courses = courses;
+        
     }
     
+    public void addStudent(Student student)
+    {
+        students.add(student);
+    }
+    
+    public void addCourse(CourseProgramme Course)
+    {
+        courses.add(Course);
+    }
 }
