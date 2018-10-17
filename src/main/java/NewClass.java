@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+import org.joda.time.LocalDate;
 /**
  *
  * @author Paddy
@@ -12,13 +12,18 @@ public class NewClass {
     
     public static void main(String[] args){
         
-        Student paddy = new Student( "paddy" , 20, (10/06/1996));
-        Student mark = new Student("mark", 20, (10/07/1997));
+        Student paddy = new Student( "paddy" , 20, "96-09-10");
+        Student mark = new Student("mark", 20, "97-07-10");
         
         System.out.print(paddy.getUserName());
         System.out.print(mark.getUserName());
         
+        Module physics = new Module("physics", 1234);
         
+        physics.addStudent(paddy);
+        //physics.addStudent(mark);
+        
+        //System.out.print(physics.getStudents());
         
         
         
