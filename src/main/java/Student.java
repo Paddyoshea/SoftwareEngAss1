@@ -30,9 +30,8 @@ public class Student {
     {
         this.name = name;
         this.age = age;
-        DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("MM/dd/yyyy");
-        LocalDate date = LocalDate.parse(DOB, dateFormat);
-        this.DOB = date;
+        this.DOB = LocalDate.parse(DOB);
+     
         userName = name + String.valueOf(age);
         
     }

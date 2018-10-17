@@ -33,4 +33,12 @@ public class Module {
     {
         courses.add(Course);
     }
+    
+    public String getStudents()
+    {
+        for(int i=0; i<=students.size();i++)
+        {
+            return students.get(i).getName();
+        }   
+    }
 }

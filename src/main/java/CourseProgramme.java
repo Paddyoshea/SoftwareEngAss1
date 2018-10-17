@@ -9,15 +9,15 @@
  * @author Paddy
  */
 import java.util.ArrayList;
-import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 public class CourseProgramme {
     private String name;
     private ArrayList<Module> modules;
     private ArrayList<Student> students;
-    private DateTime Start;
-    private DateTime end;
+    private LocalDate Start;
+    private LocalDate end;
     
-    public CourseProgramme(String name,  DateTime Start , DateTime end)
+    public CourseProgramme(String name,  LocalDate Start , LocalDate end)
     {
         this.name = name;
         this.Start = Start;
