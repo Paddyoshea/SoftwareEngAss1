@@ -19,11 +19,26 @@ public class NewClass {
         System.out.print(mark.getUserName());
         
         Module physics = new Module("physics", 1234);
+        Module maths = new Module("maths", 1234);
         
         physics.addStudent(paddy);
-        //physics.addStudent(mark);
+        physics.addStudent(mark);
         
-        //System.out.print(physics.getStudents());
+        String names[] = physics.getStudents();
+        
+        for(int i=0;i<names.length;i++)
+        {    
+            System.out.print(names[i]+"\n");
+        }
+        CourseProgramme course = new CourseProgramme("CT123","19-07-12","12-12-12");
+        course.addModule(physics);
+        course.addModule(maths);
+        String Modules[] = course.getModule();
+        
+        for(int i=0;i<names.length;i++)
+        {    
+            System.out.print(Modules[i]+"\n");
+        }
         
         
         
