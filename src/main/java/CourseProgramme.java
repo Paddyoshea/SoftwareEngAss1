@@ -12,16 +12,16 @@ import java.util.ArrayList;
 import org.joda.time.LocalDate;
 public class CourseProgramme {
     private String name;
-    private ArrayList<Module> modules;
-    private ArrayList<Student> students;
+    private ArrayList<Module> modules = new ArrayList<Module>();
+    private ArrayList<Student> students= new ArrayList<Student>();
     private LocalDate Start;
     private LocalDate end;
     
-    public CourseProgramme(String name,  LocalDate Start , LocalDate end)
+    public CourseProgramme(String name,  String Start , String end)
     {
         this.name = name;
-        this.Start = Start;
-        this.end = end;
+        this.Start = LocalDate.parse(Start);
+        this.end = LocalDate.parse(end);
     }
     
     public void addStudent(Student student)
@@ -31,5 +31,14 @@ public class CourseProgramme {
     public void addModule(Module module)
     {
         modules.add(module);
+    }
+    public String[] getModule()
+    {
+        String CurrModules[] = new String[modules.size()];
+        for(int i=0;i<modules.size();i++)
+        {
+            CurrModules[i] = modules.get(i).getName();
+        }
+        return CurrModules;
     }
 }

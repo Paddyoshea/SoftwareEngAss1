@@ -21,8 +21,8 @@ public class Student {
     private LocalDate DOB;
     private long ID;
     private String userName;
-    private ArrayList<String> courses;
-    private ArrayList<String> modules;
+    private ArrayList<String> courses = new ArrayList<String>(); 
+    private ArrayList<String> modules = new ArrayList<String>();
     
     
     

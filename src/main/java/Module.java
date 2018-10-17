@@ -14,8 +14,8 @@ import java.util.ArrayList;
 public class Module {
     private String ModuleName;
     private Long ModuleID;
-    private ArrayList<Student> students;
-    private ArrayList<CourseProgramme> courses;
+    private ArrayList<Student> students = new ArrayList<Student>();
+    private ArrayList<CourseProgramme> courses = new ArrayList<CourseProgramme>();
     
     public Module(String modName, long Id)
     {
@@ -34,11 +34,22 @@ public class Module {
         courses.add(Course);
     }
     
-    public String getStudents()
-    {
-        for(int i=0; i<=students.size();i++)
+    public String[] getStudents()
+    {   
+        String names[] = new String[students.size()];
+        for(int i=0; i<students.size(); i++)
         {
-            return students.get(i).getName();
-        }   
+            
+            names[i]= students.get(i).getName();
+        }
+        System.out.print("wow");
+        return names;
     }
+    
+    
+    public String getName()
+    {
+        return ModuleName;
+    }
+
 }
