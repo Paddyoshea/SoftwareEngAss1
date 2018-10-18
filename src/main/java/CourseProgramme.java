@@ -31,6 +31,7 @@ public class CourseProgramme {
     
     public void addStudent(Student student)
     {
+        student.addCourse(name);
         students.add(student);
     }
     public String getName()
@@ -39,6 +40,7 @@ public class CourseProgramme {
     }
     public void addModule(Module module)
     {
+        module.addCourse(name);
         modules.add(module);
     }
     public String[] getModule()
