@@ -24,9 +24,18 @@ public class CourseProgramme {
         this.end = LocalDate.parse(end);
     }
     
+    public void CoursePrograme()
+    {
+        
+    }
+    
     public void addStudent(Student student)
     {
         students.add(student);
+    }
+    public String getName()
+    {
+        return name;
     }
     public void addModule(Module module)
     {
@@ -41,4 +50,11 @@ public class CourseProgramme {
         }
         return CurrModules;
     }
+    public ArrayList<Student> getStudents()
+    {
+        return students;
+    }
+    
+    
+
 }

@@ -34,16 +34,9 @@ public class Module {
         courses.add(Course);
     }
     
-    public String[] getStudents()
-    {   
-        String names[] = new String[students.size()];
-        for(int i=0; i<students.size(); i++)
-        {
-            
-            names[i]= students.get(i).getName();
-        }
-        System.out.print("wow");
-        return names;
+    public ArrayList<Student> getStudents()
+    {
+        return students;
     }
     
     

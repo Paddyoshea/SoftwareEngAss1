@@ -9,7 +9,6 @@
  * @author Paddy
  */
 import java.util.*;
-import java.text.*;
 import org.joda.time.LocalDate;
 
 
@@ -21,7 +20,7 @@ public class Student {
     private LocalDate DOB;
     private long ID;
     private String userName;
-    private ArrayList<String> courses = new ArrayList<String>(); 
+    private String course; 
     private ArrayList<String> modules = new ArrayList<String>();
     
     
@@ -56,9 +55,9 @@ public class Student {
         return ID;
     }
     
-    public ArrayList<String> getCourses()
+    public String getCourses()
     {
-        return courses;
+        return course;
     }
     
     public ArrayList<String> getModule()
@@ -68,12 +67,12 @@ public class Student {
     
     public void addCourse(String name)
     {
-        courses.add(name);
+        this.course = name;
     }
     
     public void addModule(String name)
     {
-        courses.add(name);
+        modules.add(name);
     }
     
     
