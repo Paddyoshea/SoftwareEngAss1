@@ -33,9 +33,12 @@ public class CourseProgramme {
     {
         student.addCourse(name);
         students.add(student);
-        for(int i = 0; i<students.size();i++)
+        if(modules.size()!=0)
         {
-            Students
+            for(int i = 0; i<students.size();i++)
+                {
+                    modules.get(i).addStudent(student);
+                }
         }
     }
     public String getName()
