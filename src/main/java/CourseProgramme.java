@@ -33,13 +33,7 @@ public class CourseProgramme {
     {
         student.addCourse(name);
         students.add(student);
-        if(modules.size()!=0)
-        {
-            for(int i = 0; i<students.size();i++)
-                {
-                    modules.get(i).addStudent(student);
-                }
-        }
+        
     }
     public String getName()
     {
@@ -49,12 +43,7 @@ public class CourseProgramme {
     {
         module.addCourse(name);
         modules.add(module);
-        if(students.size()!=0)
-        {
-            for(int i = 0; i<students.size();i++)
-                {
-                    students.get(i).addModule(module);                }
-        }
+        
     }
     public String[] getModule()
     {
