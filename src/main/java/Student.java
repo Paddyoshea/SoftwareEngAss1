@@ -62,7 +62,7 @@ public class Student {
     
     public String[] getModule()
     {
-        String CurrModules[];
+        String CurrModules[] = new String[modules.size()];
         for(int i = 0; i<modules.size();i++)
         {
             CurrModules[i] = modules.get(i);
