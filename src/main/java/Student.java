@@ -21,7 +21,7 @@ public class Student {
     private long ID;
     private String userName;
     private String course; 
-    private ArrayList<Module> modules = new ArrayList<Module>();
+    private ArrayList<String> modules = new ArrayList<String>();
     
     
     
@@ -60,7 +60,7 @@ public class Student {
         return course;
     }
     
-    public ArrayList<Module> getModule()
+    public ArrayList<String> getModule()
     {
         return modules;
     }
@@ -70,7 +70,7 @@ public class Student {
         this.course = name;
     }
     
-    public void addModule(Module name)
+    public void addModule(String name)
     {
         modules.add(name);
     }
