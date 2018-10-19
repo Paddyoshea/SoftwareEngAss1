@@ -43,7 +43,6 @@ public class CourseProgramme {
     {
         module.addCourse(name);
         modules.add(module);
-        
     }
     public String[] getModule()
     {
