@@ -44,14 +44,10 @@ public class CourseProgramme {
         module.addCourse(name);
         modules.add(module);
     }
-    public String[] getModule()
+    public ArrayList<Module> getModule()
     {
-        String CurrModules[] = new String[modules.size()];
-        for(int i=0;i<modules.size();i++)
-        {
-            CurrModules[i] = modules.get(i).getName();
-        }
-        return CurrModules;
+        
+        return modules;
     }
     public ArrayList<Student> getStudents()
     {
