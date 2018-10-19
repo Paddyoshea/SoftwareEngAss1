@@ -60,9 +60,14 @@ public class Student {
         return course;
     }
     
-    public ArrayList<String> getModule()
+    public String[] getModule()
     {
-        return modules;
+        String CurrModules[];
+        for(int i = 0; i<modules.size();i++)
+        {
+            CurrModules[i] = modules.get(i);
+        }
+        return CurrModules;
     }
     
     public void addCourse(String name)
