@@ -43,8 +43,8 @@ public class StudentTestUnitTest {
     {
         Student paddy = new Student( "paddy" , 20, "96-09-10");                                //Creating two student objects
         Student mark = new Student("mark", 20, "97-07-10");
-        Module physics = new Module("physics", 1234);                                          //creating two modules
-        Module maths = new Module("maths", 1234);                                               
+        Module physics = new Module("physics", "ph1234");                                          //creating two modules
+        Module maths = new Module("maths", "ma1234");                                               
         CourseProgramme course = new CourseProgramme("EE123", "19-10-10","20-10-10");          // creating a course
         paddy.addModule(physics.getName());                                                    // adding modules to my students 
         paddy.addModule(maths.getName());
