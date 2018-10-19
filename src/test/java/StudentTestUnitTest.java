@@ -46,12 +46,12 @@ public class StudentTestUnitTest {
         Module physics = new Module("physics", "ph1234");                                          //creating two modules
         Module maths = new Module("maths", "ma1234");                                               
         CourseProgramme course = new CourseProgramme("EE123", "19-10-10","20-10-10");          // creating a course
-        paddy.addModule(physics);                                                    // adding modules to my students 
-        paddy.addModule(maths);
+        paddy.addModule("physics");                                                    // adding modules to my students 
+        paddy.addModule("maths");
         paddy.addCourse(course.getName());
-        ArrayList<Module> module = new ArrayList<Module>();                                    //Creating my test Arrays for the jUnit testing
-        module.add(physics);
-        module.add(maths);
+        ArrayList<String> module = new ArrayList<String>();                                    //Creating my test Arrays for the jUnit testing
+        module.add("physics");
+        module.add("maths");
         ArrayList<Student> students = new ArrayList<Student>();
         students.add(paddy);
         students.add(mark);
