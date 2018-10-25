@@ -41,7 +41,6 @@ public class CourseProgramme {
     }
     public void addModule(Module module)
     {
-        module.addCourse(name);
         modules.add(module);
     }
     public ArrayList<Module> getModule()

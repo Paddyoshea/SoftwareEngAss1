@@ -21,7 +21,7 @@ public class Student {
     private long ID;
     private String userName;
     private String course; 
-    private ArrayList<String> modules = new ArrayList<String>();
+    private ArrayList<Module> modules = new ArrayList<Module>();
     
     
     
@@ -60,12 +60,12 @@ public class Student {
         return course;
     }
     
-    public String[] getModule()
+    public ArrayList<String> getModule()
     {
-        String CurrModules[] = new String[modules.size()];
+        ArrayList<String> CurrModules = new ArrayList<String>();
         for(int i = 0; i<modules.size();i++)
         {
-            CurrModules[i] = modules.get(i);
+            CurrModules.add(modules.get(i).getName());
         }
         return CurrModules;
     }
@@ -75,7 +75,7 @@ public class Student {
         this.course = name;
     }
     
-    public void addModule(String name)
+    public void addModule(Module name)
     {
         modules.add(name);
     }

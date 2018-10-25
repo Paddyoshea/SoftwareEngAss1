@@ -15,7 +15,7 @@ public class Module {
     private String ModuleName;
     private String ModuleID;
     private ArrayList<Student> students = new ArrayList<Student>();
-    private ArrayList<String> courses = new ArrayList<String>();
+    private ArrayList<CourseProgramme> courses = new ArrayList<CourseProgramme>();
     
     public Module(String modName, String Id)
     {
@@ -29,7 +29,7 @@ public class Module {
         students.add(student);
     }
     
-    public void addCourse(String Course)
+    public void addCourse(CourseProgramme Course)
     {
         courses.add(Course);
     }
@@ -39,7 +39,7 @@ public class Module {
         return students;
     }
     
-    public ArrayList<String> getCourses()
+    public ArrayList<CourseProgramme> getCourses()
     {
         return courses;
     }
